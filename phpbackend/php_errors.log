@@ -6,3 +6,4 @@
 [15-Dec-2024 22:43:03 Asia/Manila] Parsed OTP Time: 1734270095
 [15-Dec-2024 22:43:03 Asia/Manila] Current Time: 1734273783
 [15-Dec-2024 22:43:03 Asia/Manila] Time Difference: 3688
+[15-Dec-2024 16:48:09 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in D:\Users\HP\Desktop\prod\phpbackend\config.php on line 37

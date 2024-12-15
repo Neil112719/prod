@@ -17,18 +17,20 @@ $dotenv->load();
 $allowedOrigin = $_ENV['REACT_APP_FRONTEND_ADDRESS'] ?? 'http://localhost:3000';
 
 // Enable CORS dynamically
-if (isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] === $allowedOrigin) {
-    header("Access-Control-Allow-Origin: $allowedOrigin");
-    header("Access-Control-Allow-Credentials: true");
-    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-    header("Access-Control-Allow-Headers: Content-Type, Authorization");
-} else {
-    header("HTTP/1.1 403 Forbidden");
-    echo json_encode([
-        "status" => "error",
-        "message" => "Origin not allowed."
-    ]);
-    exit;
+if (php_sapi_name() !== 'cli' && isset($_SERVER['HTTP_ORIGIN'])) {
+    if ($_SERVER['HTTP_ORIGIN'] === $allowedOrigin) {
+        header("Access-Control-Allow-Origin: $allowedOrigin");
+        header("Access-Control-Allow-Credentials: true");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    } else {
+        header("HTTP/1.1 403 Forbidden");
+        echo json_encode([
+            "status" => "error",
+            "message" => "Origin not allowed."
+        ]);
+        exit;
+    }
 }
 
 // Handle preflight OPTIONS requests
