@@ -1,0 +1,74 @@
+.coordinator-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align everything to the top */
+    align-items: center; /* Center horizontally */
+    padding: 20px;
+    margin: 0 auto; /* Center horizontally */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 96%; /* Set width to 96% of the page */
+    max-width: 960px; /* Optional: Restrict max width */
+}
+
+.coordinator-card {
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Ensure card content spans the full container width */
+}
+
+.coordinator-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Buttons aligned horizontally and closer together */
+.coordinator-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Reduce spacing between buttons */
+    margin-bottom: 20px; /* Add some space below buttons */
+    width: auto; /* Let buttons occupy only their required space */
+}
+
+.coordinator-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Reverted to original padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Maintain smaller text size */
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.coordinator-button:hover {
+    background-color: #003080;
+}
+
+/* Content section below buttons */
+.coordinator-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.coordinator-content h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.coordinator-content p {
+    font-size: 14px;
+    color: #555;
+}

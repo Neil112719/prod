@@ -1,0 +1,25 @@
+# MongoDB Configuration
+REACT_APP_MONGO_URI=mongodb://localhost:27017
+REACT_APP_MONGO_DB_NAME=uvluate
+
+# MySQL Configuration
+REACT_APP_MYSQL_HOST=localhost
+REACT_APP_MYSQL_DATABASE=uvluate
+REACT_APP_MYSQL_USERNAME=root
+REACT_APP_MYSQL_PASSWORD=
+
+# PHPMailer Configuration
+REACT_APP_MAIL_HOST=smtp.example.com
+REACT_APP_MAIL_PORT=587
+REACT_APP_MAIL_USERNAME=your_email@example.com
+REACT_APP_MAIL_PASSWORD=sample
+REACT_APP_MAIL_FROM_NAME=YourAppName
+
+# Backend Configuration
+REACT_APP_BACKEND_ADDRESS=http://localhost:8000
+
+# Frontend Configuration
+REACT_APP_FRONTEND_ADDRESS=http://localhost:3000
+#Firebase JWT Configuration
+JWT_SECRET=Secret_Keyword
+

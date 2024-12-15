@@ -1,0 +1,80 @@
+/* Wrapper to center the card in the top middle of the screen */
+.user-management-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align to top */
+    align-items: center; /* Center horizontally */
+    padding: 20px;
+    margin: 0 auto; /* Center horizontally in the page */
+    margin-top: 10px; /* Space from the top */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 960px; /* Restrict maximum width */
+    text-align: center;
+}
+
+/* Card content styling */
+.user-management-card {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.user-management-card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Buttons container: Horizontally aligned buttons */
+.user-management-buttons {
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px; /* Space between buttons and active component */
+}
+
+.user-management-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 18%; /* Button width for better alignment */
+    transition: background-color 0.3s ease;
+}
+
+.user-management-button:hover {
+    background-color: #003080;
+}
+
+/* Active component container below buttons */
+.user-management-content {
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    max-width: 960px; /* Max width to match the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Space between buttons and active component */
+}
+
+.user-management-content h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.user-management-content p {
+    font-size: 16px;
+    color: #555;
+}

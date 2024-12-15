@@ -1,0 +1,194 @@
+/* General Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Disable scrolling on the entire page */
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling of the layout container */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0047AB;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap; /* Prevent title wrapping */
+    overflow: hidden; /* Hide overflow if title is too long */
+    text-overflow: ellipsis;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Sidebar width */
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+    display: none; /* Hide sidebar completely when collapsed */
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling only within the content area */
+    background-color: #fff;
+    height: 100%; /* Ensure content area takes full height */
+    
+    /* Flexbox to align content at top center */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: flex-start; /* Align to the top */
+    
+    /* Optional: Max width to control content width */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Collapse Button */
+.collapse-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Sidebar Buttons */
+.sidebar-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.sidebar-buttons li {
+    margin-bottom: 10px;
+}
+
+.sidebar-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #0047AB;
+    color: white;
+}
+
+/* User Card */
+.user-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-card h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.user-card p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.gear-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.gear-icon:hover {
+    color: #0047AB;
+}
+
+/* Footer */
+.sidebar-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: auto;
+    margin-bottom: 13px;
+}
+
+.sidebar-footer a {
+    font-size: 12px;
+    color: #0047AB;
+    text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Main Layout */
+.main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: calc(100vh - 60px); /* Account for the navbar height */
+}
